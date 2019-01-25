@@ -27,21 +27,24 @@ public class InputManager : MonoBehaviour
 	//CONTROLLO BRUTTO TEMPORANEO
 	private void Update()
 	{
-		if (Input.GetButtonDown("Fire1"))
+		if (GameManager.Instance.CurrentState != GameManager.PlayingState.Running)
 		{
-			EventManager.Instance.OnQuickTimeButtonPressed.Invoke(ControllerButtons.A);
-		}
-		if (Input.GetButtonDown("Fire2"))
-		{
-			EventManager.Instance.OnQuickTimeButtonPressed.Invoke(ControllerButtons.B);
-		}
-		if (Input.GetButtonDown("Fire3"))
-		{
-			EventManager.Instance.OnQuickTimeButtonPressed.Invoke(ControllerButtons.X);
-		}
-		if (Input.GetButtonDown("Jump"))
-		{
-			EventManager.Instance.OnQuickTimeButtonPressed.Invoke(ControllerButtons.Y);
+			if (Input.GetButtonDown("A"))
+			{
+				EventManager.Instance.OnButtonPressed.Invoke(ControllerButtons.A);
+			}
+			if (Input.GetButtonDown("B"))
+			{
+				EventManager.Instance.OnButtonPressed.Invoke(ControllerButtons.B);
+			}
+			if (Input.GetButtonDown("X"))
+			{
+				EventManager.Instance.OnButtonPressed.Invoke(ControllerButtons.X);
+			}
+			if (Input.GetButtonDown("Y"))
+			{
+				EventManager.Instance.OnButtonPressed.Invoke(ControllerButtons.Y);
+			}
 		}
 	}
 }

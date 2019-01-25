@@ -6,17 +6,32 @@ public class QuickTimeBar : MonoBehaviour
 {
 
 	private List<QuickTimeButton> _buttons;
+	private Coroutine _timeLimitCoroutine;
 	public GameObject ButtonPrefab;
 	public int MaxNumberOfButtons = 5;
-
-	private void OnEnable()
-	{
-		_buttons = new List<QuickTimeButton>();
-	}
+	public float TimeLimit = 5.0f;
 
 	private void Start()
 	{
-		EventManager.Instance.OnQuickTimeButtonPressed.AddListener(CheckButton);
+		_buttons = new List<QuickTimeButton>();
+		EventManager.Instance.OnButtonPressed.AddListener(CheckButton);
+		EventManager.Instance.OnQuickTimeEventStart.AddListener(StartQuickTimeEvent);
+	}
+
+	public void StartQuickTimeEvent(float difficulty)
+	{
+		EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Smarmotting);
+		_buttons = new List<QuickTimeButton>();
+		_timeLimitCoroutine = StartCoroutine(ButtonSpawner(difficulty));
+	}
+
+	public void Clear()
+	{
+		foreach(var b in _buttons)
+		{
+			Destroy(b.gameObject);
+		}
+		_buttons.Clear();
 	}
 
 	public void AddButton()
@@ -34,7 +49,6 @@ public class QuickTimeBar : MonoBehaviour
 		if (_buttons.Count > 0 && _buttons[0].GetButtonType() == button)
 		{
 			PopFirst();
-			Swipe();
 		}
 	}
 
@@ -44,6 +58,9 @@ public class QuickTimeBar : MonoBehaviour
 		_buttons.RemoveAt(0);
 		if (_buttons.Count == 0)
 		{
+			if (_timeLimitCoroutine != null)
+				StopCoroutine(_timeLimitCoroutine);
+			Clear();
 			EventManager.Instance.OnQuickTimeSuccess.Invoke(true);
 		}
 	}
@@ -56,11 +73,25 @@ public class QuickTimeBar : MonoBehaviour
 		}
 	}
 
+	IEnumerator ButtonSpawner(float difficulty)
+	{
+		float timer = 0.0f;
+		while (timer < TimeLimit)
+		{
+			timer += difficulty;
+			Debug.Log(timer);
+			AddButton();
+			yield return new WaitForSeconds(difficulty);
+		}
+		Clear();
+		EventManager.Instance.OnQuickTimeSuccess.Invoke(false);
+	}
+
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.A))
 		{
-			AddButton();
+			EventManager.Instance.OnQuickTimeEventStart.Invoke(.2f);
 		}
 	}
 	//
