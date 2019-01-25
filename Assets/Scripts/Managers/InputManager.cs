@@ -18,13 +18,11 @@ public class InputManager : MonoBehaviour
 			Destroy(gameObject);
 	}
 
-	// Start is called before the first frame update
 	private void Start()
 	{
 
 	}
 
-	//CONTROLLO BRUTTO TEMPORANEO
 	private void Update()
 	{
 		if (GameManager.Instance.CurrentState != GameManager.PlayingState.Running)
