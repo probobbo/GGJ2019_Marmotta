@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	private void Update()
 	{
-		if (CurrentState == PlayingState.Running)
+		if (CurrentState == PlayingState.Running || CurrentState == PlayingState.Dialoguing)
 		{
 			_smarmotTimer += Time.deltaTime;
 			if (_smarmotTimer >= _currentSmarmotTimeLimit)
