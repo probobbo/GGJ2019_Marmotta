@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Managers;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -19,19 +20,19 @@ public class PauseCanvas : MonoBehaviour
         _quitBtn.onClick.AddListener(Application.Quit);
         _resumeBtn.onClick.AddListener(() =>
         {
+            EventSystem.current.SetSelectedGameObject(null);
             _panel.SetActive(false);
-            EventManager.Instance.OnUnpause.Invoke();
         });
 
     }
 
     private void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Cancel"))
         {
             _panel.SetActive(!_panel.activeInHierarchy);
-            EventManager.Instance.OnPause.Invoke();
+            EventSystem.current.SetSelectedGameObject(_resumeBtn.gameObject);
+
         }
     }
 }
