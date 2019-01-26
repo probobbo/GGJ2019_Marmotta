@@ -1,0 +1,36 @@
+{
+"dialogs" : [
+{
+	"id" : 0,
+	"dialog" : 
+	{
+		"text" : "aaa",
+		"answers" : [
+			{
+				"text" : "bbb",
+				"idtojumpto" : 1
+			},
+			{
+				"text" : "ccc",
+				"idtojumpto" : 2
+			},
+			{
+				"text" : "ddd",
+				"idtojumpto" : 3
+			}
+		]
+	}
+},
+{
+	"id" : 1,
+	"dialog" : 
+	{
+		"text" : "eee",
+		"answers" : [
+			{
+				"text" : "fff",
+				"idtojumpto" : -1
+			}
+		]
+	}
+}]}
