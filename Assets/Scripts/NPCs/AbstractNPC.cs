@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Managers;
 
 public abstract class AbstractNPC : MonoBehaviour
 {
