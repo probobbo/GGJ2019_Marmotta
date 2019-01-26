@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
 			float turningWeight = Input.GetAxis("Horizontal");
 			var direction = new Vector3(turningWeight, 0f, forwardWeight);
 			transform.Translate(direction * MovementSpeed * Time.deltaTime, Space.World);
-			if (Mathf.Abs(forwardWeight) >= _e || Mathf.Abs(turningWeight) >= _e)
-				transform.forward = direction;
+			/*if (Mathf.Abs(forwardWeight) >= _e || Mathf.Abs(turningWeight) >= _e)
+				transform.forward = direction;*/
 		}
 		else
 		{
