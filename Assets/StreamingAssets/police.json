@@ -1,61 +1,77 @@
 {
-	"dialogs" : [
+	"dialogs": [
 		{
-			"id" : 0,
-			"dialog" : 
-			{
-				"text" : "io sono il poliziotto",
-				"answers" : [
+			"id": 0,
+			"dialog": {
+				"text": "STOP! You violated the law!",
+				"answers": [
 					{
-						"text" : "bbb",
-						"idtojumpto" : 1
+						"text": "Move away, i have to marmot",
+						"idtojumpto": 1
 					},
 					{
-						"text" : "ccc",
-						"idtojumpto" : 2
+						"text": "What have i done?",
+						"idtojumpto": 2
 					},
 					{
-						"text" : "ddd",
-						"idtojumpto" : 3
+						"text": "<Resist Arrest>",
+						"idtojumpto": 3
+					},
+					{
+						"text": "Theese are not the droid you are looking for",
+						"idtojumpto": 4
 					}
 				]
 			}
 		},
 		{
-			"id" : 1,
-			"dialog" : 
-			{
-				"text" : "eee",
-				"answers" : [
+			"id": 1,
+			"dialog": {
+				"text": "OH SNAP, JUST RUN!",
+				"answers": [
 					{
-						"text" : "fff",
-						"idtojumpto" : -1
+						"text": "ty bye",
+						"idtojumpto": -1
 					}
 				]
 			}
 		},
 		{
-			"id" : 2,
-			"dialog" : 
-			{
-				"text" : "ggg",
-				"answers" : [
+			"id": 2,
+			"dialog": {
+				"text": "Pay the court a fine or serve your sentence",
+				"answers": [
 					{
-						"text" : "hhh",
-						"idtojumpto" : -1
+						"text": "FINE!",
+						"idtojumpto": -1
+					},
+					{
+						"text": "You will never take me alive!",
+						"idtojumpto": 3
 					}
 				]
 			}
 		},
 		{
-			"id" : 3,
-			"dialog" : 
-			{
-				"text" : "iii",
-				"answers" : [
+			"id": 3,
+			"dialog": {
+				"text": "You will marmot in jail!",
+				"answers": [
 					{
-						"text" : "jjj",
-						"idtojumpto" : -1
+						"text": "NOOOOO",
+						"idtojumpto": -1
+					}
+				]
+			}
+		},
+		{
+			"id": 4,
+			"dialog": {
+				"text": "These are not the droid you are looking for",
+				"answers": [
+					{
+						"text": "ty bye",
+						"idtojumpto": -1
 					}
 				]
 			}
