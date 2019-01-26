@@ -60,11 +60,16 @@ public class GameManager : MonoBehaviour
 	{
 		EventManager.Instance.OnPlayingStateChanged.AddListener(StateChanged);
 		EventManager.Instance.OnQuickTimeSuccess.AddListener(QuicktimeEnded);
+		SetUp();
+	}
+
+	private void SetUp()
+	{
 		_smarmotTimer = 0;
 		_currentQuickTimeFrequency = QuickTimeStartingFrequency;
 		_currentSmarmotTimeLimit = StartingSmarmotTimer;
+		CurrentState = PlayingState.Running;
 	}
-
 	// Update is called once per frame
 	private void Update()
 	{

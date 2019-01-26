@@ -79,6 +79,8 @@ namespace moveen.example {
 
 
         public void OnEnable() {
+			if (cam == null)
+				cam = Camera.main;
             oldCam = cam.transform.position;
         }
 
