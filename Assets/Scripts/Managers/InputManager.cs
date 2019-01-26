@@ -25,24 +25,6 @@ public class InputManager : MonoBehaviour
 
 	private void Update()
 	{
-		if (GameManager.Instance.CurrentState != GameManager.PlayingState.Running)
-		{
-			if (Input.GetButtonDown("A"))
-			{
-				EventManager.Instance.OnButtonPressed.Invoke(ControllerButtons.A);
-			}
-			if (Input.GetButtonDown("B"))
-			{
-				EventManager.Instance.OnButtonPressed.Invoke(ControllerButtons.B);
-			}
-			if (Input.GetButtonDown("X"))
-			{
-				EventManager.Instance.OnButtonPressed.Invoke(ControllerButtons.X);
-			}
-			if (Input.GetButtonDown("Y"))
-			{
-				EventManager.Instance.OnButtonPressed.Invoke(ControllerButtons.Y);
-			}
-		}
+		
 	}
 }
