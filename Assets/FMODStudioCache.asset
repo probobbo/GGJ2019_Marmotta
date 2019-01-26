@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114331515255334868}
-  - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   EditorEvents:
   - {fileID: 114205528039244094}
   - {fileID: 114504614122415434}
@@ -26,10 +26,32 @@ MonoBehaviour:
   MasterBanks:
   - {fileID: 114916763759548984}
   - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   StringsBanks:
   - {fileID: 114331515255334868}
-  stringsBankWriteTime: 636841376812312321
+  stringsBankWriteTime: 636841379560848731
   cacheVersion: 3
+--- !u!114 &114133991798075382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Nadia B\Desktop\GGJ2019_Marmotta\FMODBanks\Desktop\Master Bank.bank
+  lastModified: 636841379560808737
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1770272
+  - Name: Mobile
+    Value: 933344
+  Exists: 1
 --- !u!114 &114205528039244094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,7 +67,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Victory
   guid: 19a5d61a8a7ea44e87494bffc02536de
   Banks:
-  - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -68,7 +90,7 @@ MonoBehaviour:
   Path: event:/SFX/UI/SFX_UI_MouseOver
   guid: cfe9c2c308ff5542ba89bc293166e41e
   Banks:
-  - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -91,7 +113,7 @@ MonoBehaviour:
   Path: event:/Ambience/AMB_Restaurant
   guid: 3b39d3c5db3a114ab8bb7f3e2a929258
   Banks:
-  - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -112,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMODBanks\Desktop\Master Bank.strings.bank
-  lastModified: 636841376812312321
+  lastModified: 636841379560848731
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -135,7 +157,7 @@ MonoBehaviour:
   Path: event:/Ambience/AMB_TrafficNature
   guid: 443c51704c6b3346a2f9240f3cad7385
   Banks:
-  - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -158,7 +180,7 @@ MonoBehaviour:
   Path: event:/SFX/UI/SFX_UI_Confirm
   guid: 1a9b857cdeda5b478d8fba69a29addf9
   Banks:
-  - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -181,7 +203,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_ToiletFlush
   guid: 8718a7a892c4114bb74702121a182792
   Banks:
-  - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -209,7 +231,7 @@ MonoBehaviour:
     Value: 1770272
   - Name: Mobile
     Value: 933344
-  Exists: 1
+  Exists: 0
 --- !u!114 &114916763759548984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +268,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Shit
   guid: 830fb921158bbc4f91d589d23921ce54
   Banks:
-  - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
