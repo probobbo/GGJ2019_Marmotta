@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class EndPanelController : MonoBehaviour
 {
 	[SerializeField]
+	private Text _text;
+	[SerializeField]
 	private Button _retry;
 	[SerializeField]
 	private Button _back;
@@ -30,8 +32,14 @@ public class EndPanelController : MonoBehaviour
 
 	private void PopUp(GameManager.PlayingState state)
 	{
-		if (state == GameManager.PlayingState.End)
+		if (state == GameManager.PlayingState.Lost)
 		{
+			_text.text = "HAI SMARMOTTATO";
+			_endPanel.SetActive(true);
+		}
+		else if(state == GameManager.PlayingState.Won)
+		{
+			_text.text = "YOU WON!";
 			_endPanel.SetActive(true);
 		}
 	}

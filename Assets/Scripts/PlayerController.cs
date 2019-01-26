@@ -9,12 +9,16 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float _lookAtNpcTweenDuration = 0.5f;
 	private float _e = .05f;
 
-	private void OnTriggerEnter(Collider other)
+	public void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("NPC"))
 		{
 			var npcTransform = other.transform;
 			transform.DOLookAt(npcTransform.position, _lookAtNpcTweenDuration);
+		}
+		else if (other.CompareTag("Finish"))
+		{
+			EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Won);
 		}
 	}
 
