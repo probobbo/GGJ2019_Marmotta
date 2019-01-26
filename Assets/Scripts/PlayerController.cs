@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float _lookAtNpcTweenDuration = 0.5f;
 	private float _e = .05f;
 
-	private void OnTriggerEnter(Collider other)
+	public void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("NPC"))
 		{
@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
 		}
 		else if (other.CompareTag("Finish"))
 		{
-			Debug.Log("ASD");
 			EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Won);
 		}
 	}
