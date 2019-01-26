@@ -11,26 +11,28 @@ public abstract class AbstractNPC : MonoBehaviour
 	private DialogManager _dialogManager;
 	private bool wasHit = false;
 
-	private void Start()
+	protected void Start()
 	{
 		_dialogManager = GetComponentInChildren<DialogManager>(true);
 	}
 
 	private void Update()
 	{
-		Move();
+		if (!wasHit)
+			Move();
 	}
 
-	private void OnTriggerEnter(Collider other)
+	public void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("Player") && !wasHit)
 		{
 			EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Dialoguing);
 			_dialogManager.StartDialog();
-			transform.DOMoveX(other.transform.position.x + _offsetToPlayer.x, _npcTweenDuration);
+			/*transform.DOMoveX(other.transform.position.x + _offsetToPlayer.x, _npcTweenDuration);
 			transform.DOMoveZ(other.transform.position.z + _offsetToPlayer.z, _npcTweenDuration);
 			Vector3 pointToLookAt = new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z);
-			transform.DORotate(pointToLookAt, _npcTweenDuration);
+			*///transform.DORotate(other.transform.position, _npcTweenDuration).OnComplete(()=> transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0));
+			transform.DOLookAt(other.transform.position, _npcTweenDuration);
 			wasHit = true;
 		}
 	}
