@@ -212,6 +212,9 @@
           </e>
           <e p="NPCs" t="Include">
             <e p="AbstractNPC.cs" t="Include" />
+            <e p="Police.cs" t="Include" />
+            <e p="Processione.cs" t="Include" />
+            <e p="Promoter.cs" t="Include" />
             <e p="Vecchia.cs" t="Include" />
           </e>
           <e p="PauseCanvas.cs" t="Include" />
