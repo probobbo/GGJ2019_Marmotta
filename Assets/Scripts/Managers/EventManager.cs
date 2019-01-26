@@ -1,50 +1,44 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class EventManager : MonoBehaviour
+namespace Managers
 {
-	public class StateChangedEvent : UnityEvent<GameManager.PlayingState> { }
-	public class ButtonPressed : UnityEvent<InputManager.ControllerButtons> { }
-	public class QuickTimeSuccess : UnityEvent<bool> { }
-	public class QuickTimeEventStart : UnityEvent<float> { }
-
-	public static EventManager Instance;
-
-	public UnityEvent OnGameStarted;
-	public QuickTimeSuccess OnQuickTimeSuccess;
-	public StateChangedEvent OnPlayingStateChanged;
-	public ButtonPressed OnButtonPressed;
-	public QuickTimeEventStart OnQuickTimeEventStart;
-
-	private void Awake()
+	public class EventManager : MonoBehaviour
 	{
-		if (!Instance)
+		public class StateChangedEvent : UnityEvent<GameManager.PlayingState> { }
+		public class ButtonPressed : UnityEvent<InputManager.ControllerButtons> { }
+		public class QuickTimeSuccess : UnityEvent<bool> { }
+		public class QuickTimeEventStart : UnityEvent<float> { }
+
+		public static EventManager Instance;
+
+		public UnityEvent OnGameStarted;
+		public UnityEvent OnPause;
+		public UnityEvent OnUnpause;
+		public QuickTimeSuccess OnQuickTimeSuccess;
+		public StateChangedEvent OnPlayingStateChanged;
+		public ButtonPressed OnButtonPressed;
+		public QuickTimeEventStart OnQuickTimeEventStart;
+
+		private void Awake()
 		{
-			Instance = this;
+			if (!Instance)
+			{
+				Instance = this;
 
-			OnGameStarted = new UnityEvent();
-			OnQuickTimeSuccess = new QuickTimeSuccess();
-			OnPlayingStateChanged = new StateChangedEvent();
-			OnButtonPressed = new ButtonPressed();
-			OnQuickTimeEventStart = new QuickTimeEventStart();
+				OnGameStarted = new UnityEvent();
+				OnPause = new UnityEvent();
+				OnUnpause = new UnityEvent();
+				OnQuickTimeSuccess = new QuickTimeSuccess();
+				OnPlayingStateChanged = new StateChangedEvent();
+				OnButtonPressed = new ButtonPressed();
+				OnQuickTimeEventStart = new QuickTimeEventStart();
+			}
+			else if (Instance != this)
+				Destroy(gameObject);
+
+			DontDestroyOnLoad(this);
 		}
-		else if (Instance != this)
-			Destroy(gameObject);
-
-		DontDestroyOnLoad(this);
-	}
-
-	// Start is called before the first frame update
-	private void Start()
-	{
-
-	}
-
-	// Update is called once per frame
-	private void Update()
-	{
 
 	}
 }
