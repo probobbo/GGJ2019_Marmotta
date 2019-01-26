@@ -45,13 +45,14 @@ public class DialogManager : MonoBehaviour
 
 	public string NPC;
 	public Dialogs _dialogs;
-	private DialogState dialogState = DialogState.None;
+	private DialogState _dialogState = DialogState.None;
 
 	[SerializeField] private Image _dialogPanel;
 	[SerializeField] private TextMeshProUGUI _dialogText;
 	[SerializeField] private TextMeshProUGUI[] _answers;
 
 	private int _dialogStepIndex = 0;
+	private bool _dialogStarted = false;
 
 	private void Start()
 	{
@@ -59,7 +60,7 @@ public class DialogManager : MonoBehaviour
 
 		_dialogPanel.gameObject.SetActive(false);
 
-		EventManager.Instance.OnPlayingStateChanged.AddListener(StartDialog);
+		EventManager.Instance.OnPlayingStateChanged.AddListener(QuitDialog);
 	}
 
 	private T ReadAndParseJson<T>(string path)
@@ -68,71 +69,68 @@ public class DialogManager : MonoBehaviour
 		return JsonUtility.FromJson<T>(jsonText);
 	}
 
-	private void StartDialog(GameManager.PlayingState state)
+	public void StartDialog()
 	{
-		if (state == GameManager.PlayingState.Dialoguing)
+		_dialogState = DialogState.Dialoguing;
+		StartCoroutine(LookAtCamera(Camera.main.transform));
+		_dialogPanel.gameObject.SetActive(true);
+		NextDialogStep();
+	}
+
+	private IEnumerator LookAtCamera(Transform cameraTransform)
+	{
+		float t = 0f;
+		while (t < 0.5f)
 		{
-			dialogState = DialogState.Dialoguing;
-			_dialogPanel.gameObject.SetActive(true);
-			NextDialogStep();
-		}
-		else if (state == GameManager.PlayingState.Smarmotting)
-		{
-			QuitDialog();
+			yield return new WaitForEndOfFrame();
+			transform.LookAt(cameraTransform.position);
+			transform.Rotate(new Vector3(0f, 180f, 0f));
+			t += Time.deltaTime;
 		}
 	}
 
 	public void NextDialogStep()
 	{
-		if (_dialogStepIndex != -1)
+		_dialogText.text = _dialogs.dialogs[_dialogStepIndex].dialog.text;
+		var answers = _dialogs.dialogs[_dialogStepIndex].dialog.answers;
+		for (int i = 0; i < _answers.Length; i++)
 		{
-			_dialogText.text = _dialogs.dialogs[_dialogStepIndex].dialog.text;
-			var answers = _dialogs.dialogs[_dialogStepIndex].dialog.answers;
-			for (int i = 0; i < _answers.Length; i++)
-			{
-				if (i < answers.Length)
-					_answers[i].text = answers[i].text;
-				else
-					_answers[i].text = "";
-			}
+			if (i < answers.Length)
+				_answers[i].text = ((InputManager.ControllerButtons)i).ToString() + " " + answers[i].text;
+			else
+				_answers[i].text = "";
+		}
 
-			EventManager.Instance.OnButtonPressed.AddListener(CheckAnswer);
-		}
-		else
-		{
-			EventManager.Instance.OnButtonPressed.AddListener(EndDialog);
-		}
+		EventManager.Instance.OnButtonPressed.AddListener(CheckAnswer);
 	}
 
-	private void EndDialog(InputManager.ControllerButtons arg)
+	private void EndDialog()
 	{
-		dialogState = DialogState.Ending;
+		_dialogState = DialogState.Ending;
 		_dialogPanel.gameObject.SetActive(false);
-
-		EventManager.Instance.OnButtonPressed.RemoveListener(EndDialog);
 		EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Running);
 	}
 
-	private void QuitDialog()
+	private void QuitDialog(GameManager.PlayingState playingState)
 	{
-		switch (dialogState)
+		if (playingState == GameManager.PlayingState.Smarmotting)
 		{
-			case DialogState.Answering:
-				EventManager.Instance.OnButtonPressed.RemoveListener(CheckAnswer);
-				break;
-			case DialogState.Ending:
-				EventManager.Instance.OnButtonPressed.RemoveListener(EndDialog);
-				break;
-			default:
-				break;
-		}
+			switch (_dialogState)
+			{
+				case DialogState.Answering:
+					EventManager.Instance.OnButtonPressed.RemoveListener(CheckAnswer);
+					break;
+				default:
+					break;
+			}
 
-		_dialogPanel.gameObject.SetActive(false);
+			_dialogPanel.gameObject.SetActive(false);
+		}
 	}
 
 	private void CheckAnswer(InputManager.ControllerButtons buttonPressed)
 	{
-		dialogState = DialogState.Answering;
+		_dialogState = DialogState.Answering;
 		var answers = _dialogs.dialogs[_dialogStepIndex].dialog.answers;
 		switch (buttonPressed)
 		{
@@ -154,6 +152,10 @@ public class DialogManager : MonoBehaviour
 		}
 
 		EventManager.Instance.OnButtonPressed.RemoveListener(CheckAnswer);
-		NextDialogStep();
+
+		if (_dialogStepIndex != -1)
+			NextDialogStep();
+		else
+			EndDialog();
 	}
 }
