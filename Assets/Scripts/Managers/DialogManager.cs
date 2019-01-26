@@ -66,6 +66,10 @@ public class DialogManager : MonoBehaviour
 			_dialogPanel.gameObject.SetActive(true);
 			NextDialogStep();
 		}
+		else if (state == GameManager.PlayingState.Smarmotting)
+		{
+			QuitDialog();
+		}
 	}
 
 	public void NextDialogStep()
@@ -96,6 +100,11 @@ public class DialogManager : MonoBehaviour
 
 		EventManager.Instance.OnButtonPressed.RemoveListener(EndDialog);
 		EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Running);
+	}
+
+	private void QuitDialog()
+	{
+		_dialogPanel.gameObject.SetActive(false);
 	}
 
 	private void CheckAnswer(InputManager.ControllerButtons buttonPressed)
