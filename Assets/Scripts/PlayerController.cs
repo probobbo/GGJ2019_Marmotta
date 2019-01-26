@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
 	public float MovementSpeed = 5.0f;
+	[SerializeField] private float _lookAtNpcTweenDuration = 0.5f;
 	private float _e = .05f;
 
-	void Start()
+	private void OnTriggerEnter(Collider other)
 	{
-
+		if (other.CompareTag("NPC"))
+		{
+			var npcTransform = other.transform;
+			transform.DOLookAt(npcTransform.position, _lookAtNpcTweenDuration);
+		}
 	}
 
-	void Update()
+	private void Update()
 	{
 		if (GameManager.Instance.CurrentState == GameManager.PlayingState.Running)
 		{
