@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: 0
+  StartingSmarmotTimer: 15
+  SmarmotTimerDeltadecrease: 2
+  QuickTimeStartingFrequency: 1.5
+  QuickTimeDeltaDecrease: 0.2

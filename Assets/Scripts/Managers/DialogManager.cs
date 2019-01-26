@@ -8,6 +8,14 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
+	private enum DialogState
+	{
+		None,
+		Dialoguing,
+		Answering,
+		Ending,
+	}
+
 	[Serializable]
 	public class Dialogs
 	{
@@ -37,6 +45,7 @@ public class DialogManager : MonoBehaviour
 
 	public string NPC;
 	public Dialogs _dialogs;
+	private DialogState dialogState = DialogState.None;
 
 	[SerializeField] private Image _dialogPanel;
 	[SerializeField] private TextMeshProUGUI _dialogText;
@@ -63,8 +72,13 @@ public class DialogManager : MonoBehaviour
 	{
 		if (state == GameManager.PlayingState.Dialoguing)
 		{
+			dialogState = DialogState.Dialoguing;
 			_dialogPanel.gameObject.SetActive(true);
 			NextDialogStep();
+		}
+		else if (state == GameManager.PlayingState.Smarmotting)
+		{
+			QuitDialog();
 		}
 	}
 
@@ -92,14 +106,33 @@ public class DialogManager : MonoBehaviour
 
 	private void EndDialog(InputManager.ControllerButtons arg)
 	{
+		dialogState = DialogState.Ending;
 		_dialogPanel.gameObject.SetActive(false);
 
 		EventManager.Instance.OnButtonPressed.RemoveListener(EndDialog);
 		EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Running);
 	}
 
+	private void QuitDialog()
+	{
+		switch (dialogState)
+		{
+			case DialogState.Answering:
+				EventManager.Instance.OnButtonPressed.RemoveListener(CheckAnswer);
+				break;
+			case DialogState.Ending:
+				EventManager.Instance.OnButtonPressed.RemoveListener(EndDialog);
+				break;
+			default:
+				break;
+		}
+
+		_dialogPanel.gameObject.SetActive(false);
+	}
+
 	private void CheckAnswer(InputManager.ControllerButtons buttonPressed)
 	{
+		dialogState = DialogState.Answering;
 		var answers = _dialogs.dialogs[_dialogStepIndex].dialog.answers;
 		switch (buttonPressed)
 		{

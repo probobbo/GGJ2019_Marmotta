@@ -1,21 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuickTimeBar : MonoBehaviour
 {
 
 	private List<QuickTimeButton> _buttons;
+	private Slider _slider;
 	private Coroutine _timeLimitCoroutine;
 	public GameObject ButtonPrefab;
 	public int MaxNumberOfButtons = 5;
 	public float TimeLimit = 5.0f;
+	private float _timer = 0;
 
 	private void Start()
 	{
 		_buttons = new List<QuickTimeButton>();
 		EventManager.Instance.OnButtonPressed.AddListener(CheckButton);
 		EventManager.Instance.OnQuickTimeEventStart.AddListener(StartQuickTimeEvent);
+		_slider = GetComponentInChildren<Slider>();
+		_slider.maxValue = 100;
+		_slider.value = _slider.maxValue;
+		_slider.gameObject.SetActive(false);
 	}
 
 	public void StartQuickTimeEvent(float difficulty)
@@ -27,7 +34,8 @@ public class QuickTimeBar : MonoBehaviour
 
 	public void Clear()
 	{
-		foreach(var b in _buttons)
+		_slider.gameObject.SetActive(false);
+		foreach (var b in _buttons)
 		{
 			Destroy(b.gameObject);
 		}
@@ -75,13 +83,22 @@ public class QuickTimeBar : MonoBehaviour
 
 	IEnumerator ButtonSpawner(float difficulty)
 	{
-		float timer = 0.0f;
-		while (timer < TimeLimit)
+		_timer = 0.0f;
+		float t = 0;
+		AddButton();
+		_slider.gameObject.SetActive(true);
+		_slider.value = _slider.maxValue;
+		while (_timer < TimeLimit)
 		{
-			timer += difficulty;
-			Debug.Log(timer);
-			AddButton();
-			yield return new WaitForSeconds(difficulty);
+			_timer += Time.deltaTime;
+			_slider.value = 100 -((_timer * 100) / TimeLimit);
+			t += Time.deltaTime;
+			if (t >= difficulty)
+			{
+				t = 0;
+				AddButton();
+			}
+			yield return new WaitForEndOfFrame();
 		}
 		Clear();
 		EventManager.Instance.OnQuickTimeSuccess.Invoke(false);
