@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 		Running,
 		Smarmotting,
 		Dialoguing,
+		End,
 	}
 
 	public static GameManager Instance;
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour
 		}
 		else if (Instance != this)
 			Destroy(gameObject);
-		
+
 	}
 
 	public void StateChanged(PlayingState state)
@@ -43,8 +44,14 @@ public class GameManager : MonoBehaviour
 
 	public void QuicktimeEnded(bool result)
 	{
-		//aggiungere controllo
-		EventManager.Instance.OnPlayingStateChanged.Invoke(PlayingState.Running);
+		if (result)
+		{
+			EventManager.Instance.OnPlayingStateChanged.Invoke(PlayingState.Running);
+		}
+		else
+		{
+			EventManager.Instance.OnPlayingStateChanged.Invoke(PlayingState.End);
+		}
 	}
 
 	// Start is called before the first frame update
