@@ -27,10 +27,22 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(this);
 	}
 
+	public void StateChanged(PlayingState state)
+	{
+		CurrentState = state;
+	}
+
+	public void QuicktimeEnded(bool result)
+	{
+		//aggiungere controllo
+		EventManager.Instance.OnPlayingStateChanged.Invoke(PlayingState.Running);
+	}
+
 	// Start is called before the first frame update
 	private void Start()
 	{
-
+		EventManager.Instance.OnPlayingStateChanged.AddListener(StateChanged);
+		EventManager.Instance.OnQuickTimeSuccess.AddListener(QuicktimeEnded);
 	}
 
 	// Update is called once per frame
