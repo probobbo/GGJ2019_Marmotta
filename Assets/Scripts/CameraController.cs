@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
 
     private Transform _player;
 	private Transform _camera;
+	private GameManager.PlayingState _currentState;
 
 	private Vector3 _runningCameraPositionOffset;
 	private Quaternion _runningCameraRotationOffset;
@@ -19,16 +20,20 @@ public class CameraController : MonoBehaviour
     {
 		_camera = Camera.main.transform;
         _player = GameObject.FindGameObjectWithTag("Player").transform;
-
-		_runningCameraPositionOffset = _camera.position;
-		_runningCameraRotationOffset = _camera.rotation;
+		_currentState = GameManager.Instance.CurrentState;
 
 		EventManager.Instance.OnPlayingStateChanged.AddListener(ChangeCameraOffset);
     }
 
 	private void ChangeCameraOffset(GameManager.PlayingState state)
 	{
-		if (state == GameManager.PlayingState.Dialoguing)
+		if (_currentState == GameManager.PlayingState.Running)
+		{
+			_runningCameraPositionOffset = _camera.position;
+			_runningCameraRotationOffset = _camera.rotation;
+		}
+
+		if (state == GameManager.PlayingState.Dialoguing || state == GameManager.PlayingState.Smarmotting)
 		{
 			_camera.DOMove(_dialogCameraOffset.position, _cameraTweenDuration);
 			_camera.DORotate(_dialogCameraOffset.rotation.eulerAngles, _cameraTweenDuration);
@@ -38,6 +43,8 @@ public class CameraController : MonoBehaviour
 			_camera.DOMove(_runningCameraPositionOffset, _cameraTweenDuration);
 			_camera.DORotate(_runningCameraRotationOffset.eulerAngles, _cameraTweenDuration);
 		}
+
+		_currentState = state;
 	}
 
 	private void Update()
