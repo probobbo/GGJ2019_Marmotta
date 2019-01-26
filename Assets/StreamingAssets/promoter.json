@@ -1,61 +1,93 @@
 {
-	"dialogs" : [
+	"dialogs": [
 		{
-			"id" : 0,
-			"dialog" : 
-			{
-				"text" : "io sono il promoter",
-				"answers" : [
+			"id": 0,
+			"dialog": {
+				"text": "Hi there! Wanna try a free sample?",
+				"answers": [
 					{
-						"text" : "bbb",
-						"idtojumpto" : 1
+						"text": "Yeah sure!",
+						"idtojumpto": 1
 					},
 					{
-						"text" : "ccc",
-						"idtojumpto" : 2
+						"text": "Sorry i have to run home",
+						"idtojumpto": 2
 					},
 					{
-						"text" : "ddd",
-						"idtojumpto" : 3
+						"text": "Leave me alone!!",
+						"idtojumpto": 3
 					}
 				]
 			}
 		},
 		{
-			"id" : 1,
-			"dialog" : 
-			{
-				"text" : "eee",
-				"answers" : [
+			"id": 1,
+			"dialog": {
+				"text": "Here you go! A nice big plum",
+				"answers": [
 					{
-						"text" : "fff",
-						"idtojumpto" : -1
+						"text": "<SKREECHING NOISES>",
+						"idtojumpto": -1
+					},
+					{
+						"text": "mmmmmmm, YUMMY!",
+						"idtojumpto": 5
 					}
 				]
 			}
 		},
 		{
-			"id" : 2,
-			"dialog" : 
-			{
-				"text" : "ggg",
-				"answers" : [
+			"id": 2,
+			"dialog": {
+				"text": "Why? (if i may ask)",
+				"answers": [
 					{
-						"text" : "hhh",
-						"idtojumpto" : -1
+						"text": "i'm smarmotting",
+						"idtojumpto": 3
+					},
+					{
+						"text": "..... nothing really",
+						"idtojumpto": 4
 					}
 				]
 			}
 		},
 		{
-			"id" : 3,
-			"dialog" : 
-			{
-				"text" : "iii",
-				"answers" : [
+			"id": 3,
+			"dialog": {
+				"text": "ok fine, go on!",
+				"answers": [
 					{
-						"text" : "jjj",
-						"idtojumpto" : -1
+						"text": "thanks!",
+						"idtojumpto": -1
+					}
+				]
+			}
+		},
+		{
+			"id": 4,
+			"dialog": {
+				"text": "Oh come on you can tell me!",
+				"answers": [
+					{
+						"text": "no!",
+						"idtojumpto": 4
+					},
+					{
+						"text": "I'M SMARMOTTING",
+						"idtojumpto": 3
+					}
+				]
+			}
+		},
+		{
+			"id": 5,
+			"dialog": {
+				"text": "You don't look so well",
+				"answers": [
+					{
+						"text": "OH GOD NO!",
+						"idtojumpto": 5
 					}
 				]
 			}

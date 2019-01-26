@@ -1,0 +1,64 @@
+{
+	"dialogs" : [
+		{
+			"id" : 0,
+			"dialog" : 
+			{
+				"text" : "BROOM BROOM I'M A CAR!",
+				"answers" : [
+					{
+						"text" : "MOVE AWAY!",
+						"idtojumpto" : 1
+					},
+					{
+						"text" : "",
+						"idtojumpto" : 2
+					},
+					{
+						"text" : "ddd",
+						"idtojumpto" : 3
+					}
+				]
+			}
+		},
+		{
+			"id" : 1,
+			"dialog" : 
+			{
+				"text" : "eee",
+				"answers" : [
+					{
+						"text" : "fff",
+						"idtojumpto" : -1
+					}
+				]
+			}
+		},
+		{
+			"id" : 2,
+			"dialog" : 
+			{
+				"text" : "ggg",
+				"answers" : [
+					{
+						"text" : "hhh",
+						"idtojumpto" : -1
+					}
+				]
+			}
+		},
+		{
+			"id" : 3,
+			"dialog" : 
+			{
+				"text" : "iii",
+				"answers" : [
+					{
+						"text" : "jjj",
+						"idtojumpto" : -1
+					}
+				]
+			}
+		}
+	]
+}

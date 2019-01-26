@@ -1,61 +1,77 @@
 {
-	"dialogs" : [
+	"dialogs": [
 		{
-			"id" : 0,
-			"dialog" : 
-			{
-				"text" : "io sono la vecchia",
-				"answers" : [
+			"id": 0,
+			"dialog": {
+				"text": "Hi sweetheart, can you help me cross the road?",
+				"answers": [
 					{
-						"text" : "bbb",
-						"idtojumpto" : 1
+						"text": "Yeah sure!",
+						"idtojumpto": 1
 					},
 					{
-						"text" : "ccc",
-						"idtojumpto" : 2
+						"text": "No sorry, i can't",
+						"idtojumpto": 2
 					},
 					{
-						"text" : "ddd",
-						"idtojumpto" : 3
+						"text": "The marmot is calling!",
+						"idtojumpto": 3
 					}
 				]
 			}
 		},
 		{
-			"id" : 1,
-			"dialog" : 
-			{
-				"text" : "eee",
-				"answers" : [
+			"id": 1,
+			"dialog": {
+				"text": "Thank you dear, just let me find my glasses",
+				"answers": [
 					{
-						"text" : "fff",
-						"idtojumpto" : -1
+						"text": ".... ok ...",
+						"idtojumpto": 4
+					},
+					{
+						"text": "NO WAY",
+						"idtojumpto": 2
 					}
 				]
 			}
 		},
 		{
-			"id" : 2,
-			"dialog" : 
-			{
-				"text" : "ggg",
-				"answers" : [
+			"id": 2,
+			"dialog": {
+				"text": "HOW RUDE!",
+				"answers": [
 					{
-						"text" : "hhh",
-						"idtojumpto" : -1
+						"text": "SEE YA GRANNY",
+						"idtojumpto": -1
 					}
 				]
 			}
 		},
 		{
-			"id" : 3,
-			"dialog" : 
-			{
-				"text" : "iii",
-				"answers" : [
+			"id": 3,
+			"dialog": {
+				"text": "Oh dear, run!",
+				"answers": [
 					{
-						"text" : "jjj",
-						"idtojumpto" : -1
+						"text": "Thank you grandma!",
+						"idtojumpto": -1
+					}
+				]
+			}
+		},
+		{
+			"id": 4,
+			"dialog": {
+				"text": "Wait a second, i know they're here...",
+				"answers": [
+					{
+						"text": "...",
+						"idtojumpto": 4
+					},
+					{
+						"text": "NO WAY",
+						"idtojumpto": 2
 					}
 				]
 			}

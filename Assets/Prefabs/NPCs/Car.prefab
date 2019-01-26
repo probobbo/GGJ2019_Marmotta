@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39553dfbd852b54782c7e82189c134e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPC: police
+  NPC: car
   _dialogs:
     dialogs: []
   _dialogPanel: {fileID: 8383201865124736584}
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _offsetToPlayer: {x: 0, y: 0, z: 0}
   _npcTweenDuration: 0.5
-  _start: {x: 0, y: 0, z: 25.4}
-  _end: {x: 0, y: 0, z: 25.4}
-  TimeToComplete: 5
+  _start: {x: -39.54, y: 0, z: 196.33}
+  _end: {x: 13.3, y: 0, z: 196.33}
+  TimeToComplete: 4
 --- !u!1 &1122080777075468065
 GameObject:
   m_ObjectHideFlags: 0

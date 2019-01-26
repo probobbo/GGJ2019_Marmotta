@@ -1,61 +1,65 @@
 {
-	"dialogs" : [
+	"dialogs": [
 		{
-			"id" : 0,
-			"dialog" : 
-			{
-				"text" : "io sono la processione",
-				"answers" : [
+			"id": 0,
+			"dialog": {
+				"text": "Hello my child, are you maybe trying to marmot?",
+				"answers": [
 					{
-						"text" : "bbb",
-						"idtojumpto" : 1
+						"text": ".....Maybe",
+						"idtojumpto": 1
 					},
 					{
-						"text" : "ccc",
-						"idtojumpto" : 2
+						"text": "Sorry i don't do church",
+						"idtojumpto": 2
 					},
 					{
-						"text" : "ddd",
-						"idtojumpto" : 3
+						"text": "YES",
+						"idtojumpto": 3
 					}
 				]
 			}
 		},
 		{
-			"id" : 1,
-			"dialog" : 
-			{
-				"text" : "eee",
-				"answers" : [
+			"id": 1,
+			"dialog": {
+				"text": "Is a sin to lie you know?",
+				"answers": [
 					{
-						"text" : "fff",
-						"idtojumpto" : -1
+						"text": "YES I HAVE TO MARMOT",
+						"idtojumpto":3
+					},
+					{
+						"text": "Trust me, no marmot here",
+						"idtojumpto":2
 					}
 				]
 			}
 		},
 		{
-			"id" : 2,
-			"dialog" : 
-			{
-				"text" : "ggg",
-				"answers" : [
+			"id": 2,
+			"dialog": {
+				"text": "<skreeching noises>",
+				"answers": [
 					{
-						"text" : "hhh",
-						"idtojumpto" : -1
+						"text": "what??",
+						"idtojumpto":2
+					},
+					{
+						"text": "YOU WILL NOT STOP ME",
+						"idtojumpto":-1
 					}
 				]
 			}
 		},
 		{
-			"id" : 3,
-			"dialog" : 
-			{
-				"text" : "iii",
-				"answers" : [
+			"id": 3,
+			"dialog": {
+				"text": "OH SHIT RUN!",
+				"answers": [
 					{
-						"text" : "jjj",
-						"idtojumpto" : -1
+						"text": "OF COURSE!",
+						"idtojumpto": -1
 					}
 				]
 			}
