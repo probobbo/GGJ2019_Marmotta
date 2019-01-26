@@ -89,10 +89,7 @@ public class QuickTimeBar : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.A))
-		{
-			EventManager.Instance.OnQuickTimeEventStart.Invoke(.2f);
-		}
+		
 	}
 	//
 }
