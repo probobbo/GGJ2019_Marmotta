@@ -50,6 +50,7 @@ public class DialogManager : MonoBehaviour
 
 	[SerializeField] private Image _dialogPanel;
 	[SerializeField] private TextMeshProUGUI _dialogText;
+	[SerializeField] private Image[] _answerButtons;
 	[SerializeField] private TextMeshProUGUI[] _answers;
 
 	private int _dialogStepIndex = 0;
@@ -97,9 +98,15 @@ public class DialogManager : MonoBehaviour
 		for (int i = 0; i < _answers.Length; i++)
 		{
 			if (i < answers.Length)
+			{
+				_answerButtons[i].color = Color.white;
 				_answers[i].text = ((InputManager.ControllerButtons)i).ToString() + " " + answers[i].text;
+			}
 			else
+			{
+				_answerButtons[i].color = Color.grey;
 				_answers[i].text = "";
+			}
 		}
 
 		EventManager.Instance.OnButtonPressed.AddListener(CheckAnswer);
@@ -131,6 +138,11 @@ public class DialogManager : MonoBehaviour
 
 	private void CheckAnswer(InputManager.ControllerButtons buttonPressed)
 	{
+		StartCoroutine(CheckAnswerCoroutine(buttonPressed));
+	}
+
+	private IEnumerator CheckAnswerCoroutine(InputManager.ControllerButtons buttonPressed)
+	{
 		_dialogState = DialogState.Answering;
 		var answers = _dialogs.dialogs[_dialogStepIndex].dialog.answers;
 		switch (buttonPressed)
@@ -153,6 +165,8 @@ public class DialogManager : MonoBehaviour
 		}
 
 		EventManager.Instance.OnButtonPressed.RemoveListener(CheckAnswer);
+
+		yield return new WaitForSeconds(0.3f);
 
 		if (_dialogStepIndex != -1)
 			NextDialogStep();
