@@ -63,7 +63,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294965247
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -143,6 +143,48 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &874175512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3958369645300793000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5367b3334ceb84458088c8e4f026f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowCamera: 0
+  FogVolumeResolution: 
+  _BlendMode: 1
+  GenerateDepth: 1
+  _Downsample: 1
+  _showBilateralEdge: 0
+  _useBilateralUpsampling: 1
+  _upsampleMode: 1
+  upsampleDepthThreshold: 0.00187
+  HDR: 1
+  TAA: 0
+  _TAA: {fileID: 0}
+  DepthLayer2: 1
+  lowProfileDepthRT: []
+  lowProfileDepthRRT: []
+  SceneBlur: 1
+--- !u!114 &6992216386224465608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3958369645300793000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9171b3ee906d3e140b7dab42245bd3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Message: Add this script to generate depth if Fog Volume rendered is not used and
+    rendering path is forward
 --- !u!1 &3958369645376139463
 GameObject:
   m_ObjectHideFlags: 0
