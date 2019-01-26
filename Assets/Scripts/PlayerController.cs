@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
 			var npcTransform = other.transform;
 			transform.DOLookAt(npcTransform.position, _lookAtNpcTweenDuration);
 		}
+		else if (other.CompareTag("Finish"))
+		{
+			Debug.Log("ASD");
+			EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Won);
+		}
 	}
 
 	private void Update()

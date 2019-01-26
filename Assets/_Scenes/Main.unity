@@ -622,7 +622,7 @@ PrefabInstance:
     - target: {fileID: 1135664367545449018, guid: afd002576b53e18418d163d85841013b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 106.5
       objectReference: {fileID: 0}
     - target: {fileID: 1135664367545449018, guid: afd002576b53e18418d163d85841013b,
         type: 3}
@@ -802,6 +802,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 949421617045268282, guid: 376c3aaaf9788b143ac68e8ea58aef76,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.786
+      objectReference: {fileID: 0}
+    - target: {fileID: 949421617045268282, guid: 376c3aaaf9788b143ac68e8ea58aef76,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.182
+      objectReference: {fileID: 0}
+    - target: {fileID: 949421617045268282, guid: 376c3aaaf9788b143ac68e8ea58aef76,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.257
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 376c3aaaf9788b143ac68e8ea58aef76, type: 3}
 --- !u!1001 &5348856276822780520
@@ -873,3 +888,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80104f556e472d94eb4f2f0dbce7f673, type: 3}
+--- !u!1 &6568359056992510432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 949421617044847386, guid: 376c3aaaf9788b143ac68e8ea58aef76,
+    type: 3}
+  m_PrefabInstance: {fileID: 4863514084297473026}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6568359056992510433
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568359056992510432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: b2dae76f4f8616541bb0262c6879a82a, type: 3}

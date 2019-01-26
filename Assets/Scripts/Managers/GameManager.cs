@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
 		Running,
 		Smarmotting,
 		Dialoguing,
-		End,
+		Lost,
+		Won,
 	}
 
 	public static GameManager Instance;
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
 		}
 		else
 		{
-			EventManager.Instance.OnPlayingStateChanged.Invoke(PlayingState.End);
+			EventManager.Instance.OnPlayingStateChanged.Invoke(PlayingState.Lost);
 		}
 	}
 
