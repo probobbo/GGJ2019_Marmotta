@@ -10,17 +10,18 @@ public abstract class AbstractNPC : MonoBehaviour
 	private DialogManager _dialogManager;
 	private bool wasHit = false;
 
-	private void Start()
+	protected void Start()
 	{
 		_dialogManager = GetComponentInChildren<DialogManager>(true);
 	}
 
 	private void Update()
 	{
-		Move();
+		if (!wasHit)
+			Move();
 	}
 
-	private void OnTriggerEnter(Collider other)
+	public void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("Player") && !wasHit)
 		{
