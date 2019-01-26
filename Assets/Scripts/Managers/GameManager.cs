@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 	public float QuickTimeStartingFrequency = 1.5f;
 	public float QuickTimeDeltaDecrease = 0.2f;
 
+
 	private void Awake()
 	{
 		if (!Instance)
@@ -52,16 +53,29 @@ public class GameManager : MonoBehaviour
 		EventManager.Instance.OnPlayingStateChanged.AddListener(StateChanged);
 		EventManager.Instance.OnQuickTimeSuccess.AddListener(QuicktimeEnded);
 		_smarmotTimer = 0;
+		_currentQuickTimeFrequency = QuickTimeStartingFrequency;
+		_currentSmarmotTimeLimit = StartingSmarmotTimer;
 	}
 
 	// Update is called once per frame
 	private void Update()
 	{
-		_smarmotTimer += Time.deltaTime;
-		if (_smarmotTimer >= StartingSmarmotTimer)
+		if (CurrentState == PlayingState.Running)
 		{
-			EventManager.Instance.OnQuickTimeEventStart.Invoke(_currentQuickTimeFrequency);
+			_smarmotTimer += Time.deltaTime;
+			if (_smarmotTimer >= _currentSmarmotTimeLimit)
+			{
+				EventManager.Instance.OnQuickTimeEventStart.Invoke(_currentQuickTimeFrequency);
+				_smarmotTimer = 0;
+				_currentQuickTimeFrequency -= QuickTimeDeltaDecrease;
+				_currentSmarmotTimeLimit -= SmarmotTimerDeltadecrease;
+			}
 		}
+	}
+
+	public float GetSmarmotBarValue()
+	{
+		return (_smarmotTimer * 100) / _currentSmarmotTimeLimit;
 	}
 
 	private void OnDestroy()
