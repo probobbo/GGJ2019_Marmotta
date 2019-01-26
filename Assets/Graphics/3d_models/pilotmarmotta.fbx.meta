@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: c7ad9e8233249574a8f8c840d697b8e5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: avabdx
+    100002: avabsx
+    100004: avgdx
+    100006: avgsx
+    100008: bracciodx
+    100010: bracciodx_2
+    100012: bracciosx
+    100014: bracciosx_2
+    100016: coda
+    100018: gambadx
+    100020: gambasx
+    100022: MANLEGS
+    100024: manodx
+    100026: manosx
+    100028: MANPILOT
+    100030: MARMOTTA
+    100032: marmottamain
+    100034: piededx
+    100036: piedesx
+    100038: //RootNode
+    400000: avabdx
+    400002: avabsx
+    400004: avgdx
+    400006: avgsx
+    400008: bracciodx
+    400010: bracciodx_2
+    400012: bracciosx
+    400014: bracciosx_2
+    400016: coda
+    400018: gambadx
+    400020: gambasx
+    400022: MANLEGS
+    400024: manodx
+    400026: manosx
+    400028: MANPILOT
+    400030: MARMOTTA
+    400032: marmottamain
+    400034: piededx
+    400036: piedesx
+    400038: //RootNode
+    2100000: Office_man
+    2100002: pelle
+    2100004: No Name
+    2100006: occhi
+    2100008: naso
+    2300000: avabdx
+    2300002: avabsx
+    2300004: avgdx
+    2300006: avgsx
+    2300008: bracciodx
+    2300010: bracciodx_2
+    2300012: bracciosx
+    2300014: bracciosx_2
+    2300016: coda
+    2300018: gambadx
+    2300020: gambasx
+    2300022: MANLEGS
+    2300024: manodx
+    2300026: manosx
+    2300028: marmottamain
+    2300030: piededx
+    2300032: piedesx
+    3300000: avabdx
+    3300002: avabsx
+    3300004: avgdx
+    3300006: avgsx
+    3300008: bracciodx
+    3300010: bracciodx_2
+    3300012: bracciosx
+    3300014: bracciosx_2
+    3300016: coda
+    3300018: gambadx
+    3300020: gambasx
+    3300022: MANLEGS
+    3300024: manodx
+    3300026: manosx
+    3300028: marmottamain
+    3300030: piededx
+    3300032: piedesx
+    4300000: MANLEGS
+    4300002: bracciodx
+    4300004: bracciosx
+    4300006: coda
+    4300008: gambasx
+    4300010: avgsx
+    4300012: piedesx
+    4300014: gambadx
+    4300016: avgdx
+    4300018: piededx
+    4300020: bracciosx_2
+    4300022: avabsx
+    4300024: manosx
+    4300026: bracciodx_2
+    4300028: avabdx
+    4300030: manodx
+    4300032: marmottamain
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 43f2a55cec34d7c4aadf875e200f8cee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Office_man
+    second: {fileID: 2100000, guid: ec392626a600bb6439ddad4fba692e56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: naso
+    second: {fileID: 2100000, guid: 77299e5ec62920448ac3427d15bdd4c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: occhi
+    second: {fileID: 2100000, guid: c2ee55edec56750499e655ac27517ae5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pelle
+    second: {fileID: 2100000, guid: ee7ab5dd37cb29a44850f38cd1cc4360, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: office_man01
+    second: {fileID: 2800000, guid: 605eee26be4b21e45a95f316cd3e78ff, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
