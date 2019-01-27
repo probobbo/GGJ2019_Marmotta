@@ -197,6 +197,11 @@ PrefabInstance:
       propertyPath: NPC
       value: processione
       objectReference: {fileID: 0}
+    - target: {fileID: 6205264368893283454, guid: 3248eecd0d919ad4084c4a4eb27de532,
+        type: 3}
+      propertyPath: _anim
+      value: 
+      objectReference: {fileID: 7343206436437083898}
     - target: {fileID: 7282098136384885012, guid: 3248eecd0d919ad4084c4a4eb27de532,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -331,6 +336,12 @@ PrefabInstance:
 --- !u!4 &7343206436444776812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400118, guid: 5716d0b06bcb22744b5e350e475648e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7343206436444386202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7343206436437083898 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 5716d0b06bcb22744b5e350e475648e1,
     type: 3}
   m_PrefabInstance: {fileID: 7343206436444386202}
   m_PrefabAsset: {fileID: 0}

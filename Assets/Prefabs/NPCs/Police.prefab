@@ -197,6 +197,11 @@ PrefabInstance:
       propertyPath: NPC
       value: police
       objectReference: {fileID: 0}
+    - target: {fileID: 6205264368893283454, guid: 3248eecd0d919ad4084c4a4eb27de532,
+        type: 3}
+      propertyPath: _anim
+      value: 
+      objectReference: {fileID: 7263298028682707714}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3248eecd0d919ad4084c4a4eb27de532, type: 3}
 --- !u!224 &8454816399612275749 stripped
@@ -281,6 +286,12 @@ PrefabInstance:
 --- !u!4 &7263298028692008106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400072, guid: cce3518b0aa007b43bf084d671266e0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7263298028692141666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7263298028682707714 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: cce3518b0aa007b43bf084d671266e0c,
     type: 3}
   m_PrefabInstance: {fileID: 7263298028692141666}
   m_PrefabAsset: {fileID: 0}
