@@ -7,7 +7,7 @@ using Managers;
 
 public class CameraController : MonoBehaviour
 {
-	[SerializeField] private Transform _dialogCameraOffset;
+	[SerializeField] private Transform _smarmottingCameraOffset;
 	[SerializeField] private float _cameraTweenDuration = 0.5f;
 
     private Transform _player;
@@ -29,10 +29,10 @@ public class CameraController : MonoBehaviour
 
 	private void ChangeCameraOffset(GameManager.PlayingState state)
 	{
-		if (state == GameManager.PlayingState.Dialoguing || state == GameManager.PlayingState.Smarmotting)
+		if (state == GameManager.PlayingState.Smarmotting)
 		{
-			_camera.DOMove(_dialogCameraOffset.position, _cameraTweenDuration);
-			_camera.DORotate(_dialogCameraOffset.rotation.eulerAngles, _cameraTweenDuration);
+			_camera.DOMove(_smarmottingCameraOffset.position, _cameraTweenDuration);
+			_camera.DORotate(_smarmottingCameraOffset.rotation.eulerAngles, _cameraTweenDuration);
 		}
 		else if (state == GameManager.PlayingState.Running)
 		{
