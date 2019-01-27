@@ -12,7 +12,7 @@ public abstract class AbstractNPC : MonoBehaviour
 	private DialogManager _dialogManager;
 	private Animator _animator;
 	private Transform _cameraTransform;
-	private bool wasHit = false;
+	protected bool _wasHit = false;
 	private float _cameraTweenDuration = 0.5f;
 
 	protected void Start()
@@ -24,13 +24,13 @@ public abstract class AbstractNPC : MonoBehaviour
 
 	private void Update()
 	{
-		if (!wasHit)
+		if (!_wasHit)
 			Move();
 	}
 
 	public void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("Player") && !wasHit && GameManager.Instance.CanChangeState)
+		if (other.CompareTag("Player") && !_wasHit && GameManager.Instance.CanChangeState)
 		{
 			EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Dialoguing);
 			_dialogManager.StartDialog();
@@ -43,7 +43,7 @@ public abstract class AbstractNPC : MonoBehaviour
 			Vector3 pointToLookAt = new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z);
 			*///transform.DORotate(other.transform.position, _npcTweenDuration).OnComplete(()=> transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0));
 			transform.DOLookAt(other.transform.position, _npcTweenDuration);
-			wasHit = true;
+			_wasHit = true;
 		}
 	}
 
