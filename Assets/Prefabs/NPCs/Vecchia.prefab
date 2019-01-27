@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 133678955610262092}
   - component: {fileID: 2637491801916987098}
   - component: {fileID: 8818262560589089349}
-  - component: {fileID: 5106467438028224257}
+  - component: {fileID: 1501131082722902365}
   m_Layer: 0
   m_Name: Vecchia
   m_TagString: NPC
@@ -61,7 +61,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.0206614, y: 2.9049013, z: 1.0249801}
   m_Center: {x: -1.0103306, y: 1.3225969, z: 0}
---- !u!114 &5106467438028224257
+--- !u!114 &1501131082722902365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,11 +70,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 594953673845572721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87af95d842b5cfe43ac19cc958d24962, type: 3}
+  m_Script: {fileID: 11500000, guid: 86f297a60f54951428b27d68cb23138d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetToPlayer: {x: 2, y: 0, z: 2}
   _npcTweenDuration: 0.5
+  Speed: 3
+  Range: 15
 --- !u!95 &8796282436368963625
 Animator:
   serializedVersion: 3
@@ -307,22 +309,22 @@ PrefabInstance:
       propertyPath: _anim
       value: 
       objectReference: {fileID: 8796282436368963625}
-    - target: {fileID: 7282098136384885012, guid: 3248eecd0d919ad4084c4a4eb27de532,
+    - target: {fileID: 958589673882511311, guid: 3248eecd0d919ad4084c4a4eb27de532,
         type: 3}
       propertyPath: m_havePropertiesChanged
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7282098136384885012, guid: 3248eecd0d919ad4084c4a4eb27de532,
+    - target: {fileID: 958589673882511311, guid: 3248eecd0d919ad4084c4a4eb27de532,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 958589673882511311, guid: 3248eecd0d919ad4084c4a4eb27de532,
+    - target: {fileID: 7282098136384885012, guid: 3248eecd0d919ad4084c4a4eb27de532,
         type: 3}
       propertyPath: m_havePropertiesChanged
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 958589673882511311, guid: 3248eecd0d919ad4084c4a4eb27de532,
+    - target: {fileID: 7282098136384885012, guid: 3248eecd0d919ad4084c4a4eb27de532,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 0

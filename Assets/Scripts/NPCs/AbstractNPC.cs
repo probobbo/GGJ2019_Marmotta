@@ -30,11 +30,12 @@ public abstract class AbstractNPC : MonoBehaviour
 
 	public void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("Player") && !wasHit)
+		if (other.CompareTag("Player") && !wasHit && GameManager.Instance.CanChangeState)
 		{
 			EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Dialoguing);
 			_dialogManager.StartDialog();
-			_animator.SetTrigger("talk");
+			if (_animator != null)
+				_animator.SetTrigger("talk");
 			_cameraTransform.DOMove(_cameraOffset.position, _cameraTweenDuration);
 			_cameraTransform.DORotate(_cameraOffset.rotation.eulerAngles, _cameraTweenDuration);
 			/*transform.DOMoveX(other.transform.position.x + _offsetToPlayer.x, _npcTweenDuration);
