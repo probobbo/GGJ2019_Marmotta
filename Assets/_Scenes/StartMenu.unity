@@ -6794,6 +6794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _start: {fileID: 802084359}
+  _credits: {fileID: 761191871}
 --- !u!1 &1986236698
 GameObject:
   m_ObjectHideFlags: 0
