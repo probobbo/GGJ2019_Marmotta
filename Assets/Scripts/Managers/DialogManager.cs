@@ -102,7 +102,7 @@ public class DialogManager : MonoBehaviour
 			if (i < answers.Length)
 			{
 				_answerButtons[i].color = Color.white;
-				_answers[i].text = ((InputManager.ControllerButtons)i).ToString() + " " + answers[i].text;
+				_answers[i].text = answers[i].text;
 			}
 			else
 			{
