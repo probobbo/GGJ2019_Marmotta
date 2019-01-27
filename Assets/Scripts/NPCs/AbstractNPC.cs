@@ -26,7 +26,7 @@ public abstract class AbstractNPC : MonoBehaviour
 
 	public void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("Player") && !wasHit)
+		if (other.CompareTag("Player") && !wasHit && GameManager.Instance.CanChangeState)
 		{
 			EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Dialoguing);
 			_dialogManager.StartDialog();

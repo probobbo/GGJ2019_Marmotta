@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 	public float QuickTimeStartingFrequency = 1.5f;
 	public float QuickTimeDeltaDecrease = 0.2f;
 
+	public bool CanChangeState;
+
 
 	private void Awake()
 	{
@@ -41,11 +43,19 @@ public class GameManager : MonoBehaviour
 
 	public void StateChanged(PlayingState state)
 	{
-		CurrentState = state;
+		if (CanChangeState)
+		{
+			if (state == PlayingState.Smarmotting)
+			{
+				CanChangeState = false;
+			}
+			CurrentState = state;
+		}
 	}
 
 	public void QuicktimeEnded(bool result)
 	{
+		CanChangeState = true;
 		if (result)
 		{
 			EventManager.Instance.OnPlayingStateChanged.Invoke(PlayingState.Running);
@@ -66,6 +76,7 @@ public class GameManager : MonoBehaviour
 
 	private void SetUp()
 	{
+		CanChangeState = true;
 		_smarmotTimer = 0;
 		_currentQuickTimeFrequency = QuickTimeStartingFrequency;
 		_currentSmarmotTimeLimit = StartingSmarmotTimer;
