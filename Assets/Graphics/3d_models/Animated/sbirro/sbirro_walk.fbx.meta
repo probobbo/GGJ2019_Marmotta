@@ -84,7 +84,7 @@ ModelImporter:
     2100008: baffi
     4300000: ciambella
     4300002: sbirro_1_2
-    7400000: mixamo.com
+    7400000: sbirro_walking
     9500000: //RootNode
     11100000: //RootNode
     13700000: ciambella
@@ -120,7 +120,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -129,7 +129,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: sbirro_walking
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 42
@@ -208,7 +208,7 @@ ModelImporter:
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

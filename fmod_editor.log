@@ -18,10 +18,23 @@
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c96f64a4ff9605e1315b84e79cfa955765d12b6c
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+<<<<<<< HEAD
 =======
 >>>>>>> 6a351ce7c4df7d0054d6788d0ad79ade23e4eadd
+=======
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+>>>>>>> c96f64a4ff9605e1315b84e79cfa955765d12b6c

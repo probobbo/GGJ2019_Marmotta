@@ -23,23 +23,17 @@ MonoBehaviour:
   - {fileID: 114988989009012374}
   - {fileID: 114608356114227998}
   - {fileID: 114221801527903668}
-  - {fileID: 114059658598445586}
-  - {fileID: 114722070059628830}
+  - {fileID: 114155401257032742}
+  - {fileID: 114923822398229324}
   MasterBanks:
   - {fileID: 114916763759548984}
   - {fileID: 114913938852117972}
   - {fileID: 114133991798075382}
   StringsBanks:
   - {fileID: 114331515255334868}
-<<<<<<< HEAD
-  stringsBankWriteTime: 636841420836829236
-  cacheVersion: 3
---- !u!114 &114059658598445586
-=======
-  stringsBankWriteTime: 636841379560848731
+  stringsBankWriteTime: 636841449084251006
   cacheVersion: 3
 --- !u!114 &114133991798075382
->>>>>>> 6a351ce7c4df7d0054d6788d0ad79ade23e4eadd
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,14 +42,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Nadia B\Desktop\GGJ2019_Marmotta\FMODBanks\Desktop\Master Bank.bank
+  lastModified: 636841449084201084
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2032800
+  - Name: Mobile
+    Value: 1080864
+  Exists: 1
+--- !u!114 &114155401257032742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/SFX/SFX_Costipazione
   guid: 230102ed64c3df48a96e642383f46da6
   Banks:
-  - {fileID: 114913938852117972}
+  - {fileID: 114133991798075382}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -63,20 +77,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1392
-=======
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\Nadia B\Desktop\GGJ2019_Marmotta\FMODBanks\Desktop\Master Bank.bank
-  lastModified: 636841379560808737
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1770272
-  - Name: Mobile
-    Value: 933344
-  Exists: 1
->>>>>>> 6a351ce7c4df7d0054d6788d0ad79ade23e4eadd
 --- !u!114 &114205528039244094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,11 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMODBanks\Desktop\Master Bank.strings.bank
-<<<<<<< HEAD
-  lastModified: 636841420836829236
-=======
-  lastModified: 636841379560848731
->>>>>>> 6a351ce7c4df7d0054d6788d0ad79ade23e4eadd
+  lastModified: 636841449084251006
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -240,29 +236,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 8753
---- !u!114 &114722070059628830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/UI/SFX_UI_Click
-  guid: cfe9c2c308ff5542ba89bc293166e41e
-  Banks:
-  - {fileID: 114913938852117972}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 465
 --- !u!114 &114913938852117972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,19 +249,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\probo\Documents\GGJ2019_Marmotta\FMODBanks\Desktop\Master Bank.bank
-  lastModified: 636841420836779358
+  lastModified: 636841376812302357
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2032800
+    Value: 1770272
   - Name: Mobile
-<<<<<<< HEAD
-    Value: 1080864
-  Exists: 1
-=======
     Value: 933344
   Exists: 0
->>>>>>> 6a351ce7c4df7d0054d6788d0ad79ade23e4eadd
 --- !u!114 &114916763759548984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +278,29 @@ MonoBehaviour:
   - Name: Mobile
     Value: 315328
   Exists: 0
+--- !u!114 &114923822398229324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/SFX_UI_Click
+  guid: cfe9c2c308ff5542ba89bc293166e41e
+  Banks:
+  - {fileID: 114133991798075382}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 465
 --- !u!114 &114988989009012374
 MonoBehaviour:
   m_ObjectHideFlags: 0
