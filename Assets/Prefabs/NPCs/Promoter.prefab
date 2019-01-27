@@ -84,7 +84,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100006, guid: de97cac1271c8d54baebe13ed8484a95, type: 3}
       propertyPath: m_Name
-      value: girl_Breathing Idle
+      value: Girl
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: de97cac1271c8d54baebe13ed8484a95, type: 3}
       propertyPath: m_LocalPosition.x
