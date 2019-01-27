@@ -30,7 +30,8 @@ public abstract class AbstractNPC : MonoBehaviour
 		{
 			EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Dialoguing);
 			_dialogManager.StartDialog();
-			_animator.SetTrigger("talk");
+			if (_animator != null)
+				_animator.SetTrigger("talk");
 			/*transform.DOMoveX(other.transform.position.x + _offsetToPlayer.x, _npcTweenDuration);
 			transform.DOMoveZ(other.transform.position.z + _offsetToPlayer.z, _npcTweenDuration);
 			Vector3 pointToLookAt = new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Police : AbstractNPC
+public class NPC : AbstractNPC
 {
 
 	private Animator _anim;
@@ -21,11 +21,14 @@ public class Police : AbstractNPC
 	{
 		if (_walking || Vector3.Distance(transform.position, _player.position) <= Range)
 		{
-			if (!_walking) {
+			if (!_walking)
+			{
 				_anim.SetTrigger("walk");
 				_walking = true;
 			}
+			Vector3 dir = (_player.position - transform.position).normalized;
 			transform.LookAt(_player);
+			transform.position += dir * Speed * Time.deltaTime;
 		}
 	}
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1302831674801453803}
   - component: {fileID: 3986875470434461309}
   - component: {fileID: 7615228390743259874}
-  - component: {fileID: 1454169599901689441}
+  - component: {fileID: 4961967990113882925}
   m_Layer: 0
   m_Name: Promoter
   m_TagString: NPC
@@ -61,7 +61,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 4}
   m_Center: {x: 0, y: 2, z: 0}
---- !u!114 &1454169599901689441
+--- !u!114 &4961967990113882925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,11 +70,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1986028040547972310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b37004fe2604e1045b32eeeed71d8fff, type: 3}
+  m_Script: {fileID: 11500000, guid: 86f297a60f54951428b27d68cb23138d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetToPlayer: {x: 2, y: 0, z: 2}
   _npcTweenDuration: 0.5
+  Speed: 3
+  Range: 15
 --- !u!1001 &3432138175700417406
 PrefabInstance:
   m_ObjectHideFlags: 0
