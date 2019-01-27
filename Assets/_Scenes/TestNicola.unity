@@ -1415,8 +1415,19 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6633930288961063368, guid: f2c6cdf709d623443b5fe21e4dba6c83,
+        type: 3}
+      propertyPath: _anim
+      value: 
+      objectReference: {fileID: 4154286572600183224}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c6cdf709d623443b5fe21e4dba6c83, type: 3}
+--- !u!95 &4154286572600183224 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7263298028682707714, guid: f2c6cdf709d623443b5fe21e4dba6c83,
+    type: 3}
+  m_PrefabInstance: {fileID: 4154286572600183223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7986872019589918722
 PrefabInstance:
   m_ObjectHideFlags: 0

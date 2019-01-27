@@ -302,6 +302,11 @@ PrefabInstance:
       propertyPath: NPC
       value: vecchia
       objectReference: {fileID: 0}
+    - target: {fileID: 6205264368893283454, guid: 3248eecd0d919ad4084c4a4eb27de532,
+        type: 3}
+      propertyPath: _anim
+      value: 
+      objectReference: {fileID: 8796282436368963625}
     - target: {fileID: 7282098136384885012, guid: 3248eecd0d919ad4084c4a4eb27de532,
         type: 3}
       propertyPath: m_havePropertiesChanged

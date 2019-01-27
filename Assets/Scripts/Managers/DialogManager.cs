@@ -52,6 +52,8 @@ public class DialogManager : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI _dialogText;
 	[SerializeField] private Image[] _answerButtons;
 	[SerializeField] private TextMeshProUGUI[] _answers;
+	[SerializeField] private Animator _anim;
+
 
 	private int _dialogStepIndex = 0;
 	private bool _dialogStarted = false;
@@ -76,6 +78,8 @@ public class DialogManager : MonoBehaviour
 		_dialogState = DialogState.Dialoguing;
 		StartCoroutine(LookAtCamera(Camera.main.transform));
 		_dialogPanel.gameObject.SetActive(true);
+		if (_anim != null)
+			_anim.SetTrigger("Talking");
 		NextDialogStep();
 	}
 
@@ -114,6 +118,8 @@ public class DialogManager : MonoBehaviour
 
 	private void EndDialog()
 	{
+		if (_anim != null)
+			_anim.SetTrigger("End");
 		_dialogState = DialogState.Ending;
 		_dialogPanel.gameObject.SetActive(false);
 		EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Running);

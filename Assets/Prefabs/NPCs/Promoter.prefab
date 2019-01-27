@@ -154,6 +154,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3432138175700417406}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &3432138175693114910 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: de97cac1271c8d54baebe13ed8484a95,
+    type: 3}
+  m_PrefabInstance: {fileID: 3432138175700417406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6254870786901848375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -276,6 +282,11 @@ PrefabInstance:
       propertyPath: NPC
       value: promoter
       objectReference: {fileID: 0}
+    - target: {fileID: 6205264368893283454, guid: 3248eecd0d919ad4084c4a4eb27de532,
+        type: 3}
+      propertyPath: _anim
+      value: 
+      objectReference: {fileID: 3432138175693114910}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3248eecd0d919ad4084c4a4eb27de532, type: 3}
 --- !u!224 &2996505692790495396 stripped
