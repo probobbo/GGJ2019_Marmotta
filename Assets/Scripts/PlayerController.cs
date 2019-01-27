@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
 	public void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("NPC"))
-		{
+		{/*
 			var npcTransform = other.transform;
-			transform.DOLookAt(npcTransform.position, _lookAtNpcTweenDuration);
+			transform.DOLookAt(npcTransform.position, _lookAtNpcTweenDuration);*/
 		}
 		else if (other.CompareTag("Finish"))
 		{

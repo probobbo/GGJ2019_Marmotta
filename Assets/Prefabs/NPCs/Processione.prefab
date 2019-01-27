@@ -269,7 +269,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100118, guid: 5716d0b06bcb22744b5e350e475648e1, type: 3}
       propertyPath: m_Name
-      value: prete_Standing Arguing
+      value: Prete
       objectReference: {fileID: 0}
     - target: {fileID: 400118, guid: 5716d0b06bcb22744b5e350e475648e1, type: 3}
       propertyPath: m_LocalPosition.x
