@@ -259,11 +259,13 @@ MonoBehaviour:
     dialogs: []
   _dialogPanel: {fileID: 8383201865124736584}
   _dialogText: {fileID: 6903018521311172288}
+  _answerButtons: []
   _answers:
   - {fileID: 4003382668559343643}
   - {fileID: 9020430475435695711}
   - {fileID: 2811437420134930304}
   - {fileID: 6889138557132417037}
+  _anim: {fileID: 0}
 --- !u!1 &770266468892591205
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +457,7 @@ Transform:
   m_Children:
   - {fileID: 5015671549148442183}
   - {fileID: 3617439533107035112}
+  - {fileID: 1411107567695065382}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -479,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetToPlayer: {x: 0, y: 0, z: 0}
+  _cameraOffset: {fileID: 1411107567695065382}
   _npcTweenDuration: 0.5
   _start: {x: -39.54, y: 0, z: 196.33}
   _end: {x: 13.3, y: 0, z: 196.33}
@@ -2090,6 +2094,36 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &6565847339578502330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1411107567695065382}
+  m_Layer: 0
+  m_Name: CameraOffset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1411107567695065382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6565847339578502330}
+  m_LocalRotation: {x: 0.03892945, y: 0.9597409, z: -0.1692282, w: 0.2207799}
+  m_LocalPosition: {x: -1.54, y: 5.36, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 166283323701753301}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 20, y: 154.09, z: 0}
 --- !u!1 &7427481145329875224
 GameObject:
   m_ObjectHideFlags: 0
