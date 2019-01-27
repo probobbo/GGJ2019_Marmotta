@@ -78,8 +78,6 @@ public class DialogManager : MonoBehaviour
 		_dialogState = DialogState.Dialoguing;
 		StartCoroutine(LookAtCamera(Camera.main.transform));
 		_dialogPanel.gameObject.SetActive(true);
-		if (_anim != null)
-			_anim.SetTrigger("Talking");
 		NextDialogStep();
 	}
 
@@ -119,7 +117,7 @@ public class DialogManager : MonoBehaviour
 	private void EndDialog()
 	{
 		if (_anim != null)
-			_anim.SetTrigger("End");
+			_anim.SetTrigger("dead");
 		_dialogState = DialogState.Ending;
 		_dialogPanel.gameObject.SetActive(false);
 		EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Running);
