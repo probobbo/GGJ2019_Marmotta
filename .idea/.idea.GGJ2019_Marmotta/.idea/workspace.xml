@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b743fdd3-15c5-404f-b07c-2ae0c8ca977b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Street.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Street.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/Lightmap-0_comp_shadowmask.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/Lightmap-0_comp_shadowmask.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-0.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-1.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-1.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-10.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-10.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-11.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-11.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-12.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-12.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-13.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-13.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-14.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-14.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-15.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-15.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-16.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-16.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-17.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-17.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-18.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-18.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-19.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-19.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-2.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-2.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-20.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-20.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-21.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-21.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-3.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-3.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-4.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-4.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-5.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-5.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-6.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-6.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-7.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-7.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-8.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-8.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-9.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main/ReflectionProbe-9.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Main_Profiles/PostProcessingFar.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Main_Profiles/PostProcessingFar.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StartingMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StartingMenuController.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/ThirdParties/FogVolume/Scripts/FogVolumeRenderer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
+            <state relative-caret-position="10608">
               <caret line="874" selection-start-line="874" selection-end-line="874" />
               <folding>
                 <marker date="1532351582000" expanded="false" signature="6:131" ph="..." />
@@ -217,6 +189,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/StartingMenuController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <marker date="1548596146691" expanded="false" signature="6:135" ph="..." />
+                <marker date="1548596146691" expanded="true" signature="188:443" ph="{...}" />
+                <marker date="1548596146691" expanded="true" signature="298:441" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -228,6 +214,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StartingMenuController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -238,6 +225,7 @@
         <option value="$PROJECT_DIR$/Assets/PauseCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PauseCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StartingMenuController.cs" />
       </list>
     </option>
   </component>
@@ -257,13 +245,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
       </pane>
     </panes>
   </component>
@@ -313,11 +301,12 @@
       <workItem from="1548522501137" duration="980000" />
       <workItem from="1548537811924" duration="1088000" />
       <workItem from="1548589230487" duration="590000" />
+      <workItem from="1548596047701" duration="754000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3781000" />
+    <option name="totallyTimeSpent" value="4535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -329,7 +318,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18390192" />
@@ -417,6 +406,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <marker date="1548584329498" expanded="false" signature="6:127" ph="..." />
+            <marker date="1548584329498" expanded="true" signature="174:1416" ph="{...}" />
+            <marker date="1548584329498" expanded="true" signature="483:785" ph="{...}" />
+            <marker date="1548584329498" expanded="true" signature="851:1331" ph="{...}" />
+            <marker date="1548584329498" expanded="true" signature="907:1081" ph="{...}" />
+            <marker date="1548584329498" expanded="true" signature="1135:1328" ph="{...}" />
+            <marker date="1548584329498" expanded="true" signature="1355:1414" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -437,7 +435,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/ThirdParties/FogVolume/Scripts/FogVolumeRenderer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
+        <state relative-caret-position="10608">
           <caret line="874" selection-start-line="874" selection-end-line="874" />
           <folding>
             <marker date="1532351582000" expanded="false" signature="6:131" ph="..." />
@@ -538,6 +536,18 @@
             <marker date="1532351582000" expanded="true" signature="31269:31365" ph="{...}" />
             <marker date="1532351582000" expanded="true" signature="31412:32340" ph="{...}" />
             <marker date="1532351582000" expanded="true" signature="32078:32334" ph="/* if (ThisCamera.depthTextureMode == DepthTextureMode.None) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/StartingMenuController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <marker date="1548596146691" expanded="false" signature="6:135" ph="..." />
+            <marker date="1548596146691" expanded="true" signature="188:443" ph="{...}" />
+            <marker date="1548596146691" expanded="true" signature="298:441" ph="{...}" />
           </folding>
         </state>
       </provider>
