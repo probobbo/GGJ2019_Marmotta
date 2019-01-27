@@ -1,61 +1,81 @@
 {
-	"dialogs" : [
+	"dialogs": [
 		{
-			"id" : 0,
-			"dialog" : 
-			{
-				"text" : "BROOM BROOM I'M A CAR!",
-				"answers" : [
+			"id": 0,
+			"dialog": {
+				"text": "BROOM BROOM I'M A CAR!",
+				"answers": [
 					{
-						"text" : "MOVE AWAY!",
-						"idtojumpto" : 1
+						"text": "MOVE AWAY!",
+						"idtojumpto": 1
 					},
 					{
-						"text" : "",
-						"idtojumpto" : 2
+						"text": "Well i'm not",
+						"idtojumpto": 2
 					},
 					{
-						"text" : "ddd",
-						"idtojumpto" : 3
+						"text": "Are you a talking car?",
+						"idtojumpto": 3
 					}
 				]
 			}
 		},
 		{
-			"id" : 1,
-			"dialog" : 
-			{
-				"text" : "eee",
-				"answers" : [
+			"id": 1,
+			"dialog": {
+				"text": "Woah chill out mate",
+				"answers": [
 					{
-						"text" : "fff",
-						"idtojumpto" : -1
+						"text": "SKREE",
+						"idtojumpto": -1
 					}
 				]
 			}
 		},
 		{
-			"id" : 2,
-			"dialog" : 
-			{
-				"text" : "ggg",
-				"answers" : [
+			"id": 2,
+			"dialog": {
+				"text": "Oh yeah, that's funny",
+				"answers": [
 					{
-						"text" : "hhh",
-						"idtojumpto" : -1
+						"text": "Well excuse me for trying",
+						"idtojumpto": -1
 					}
 				]
 			}
 		},
 		{
-			"id" : 3,
-			"dialog" : 
-			{
-				"text" : "iii",
-				"answers" : [
+			"id": 3,
+			"dialog": {
+				"text": "Yes i am",
+				"answers": [
 					{
-						"text" : "jjj",
-						"idtojumpto" : -1
+						"text": "What? Why?",
+						"idtojumpto": 4
+					},
+					{
+						"text": "Do you have something wise to say?",
+						"idtojumpto": 0
+					},
+					{
+						"text": "Well move out of the way i need to marmot",
+						"idtojumpto": 1
+					},
+					{
+						"text": "Well i'm driving my marmot",
+						"idtojumpto": 2
+					}
+				]
+			}
+		},
+		{
+			"id": 4,
+			"dialog": {
+				"text": "I wish i was a real boy",
+				"answers": [
+					{
+						"text": "MOVE!",
+						"idtojumpto": -1
 					}
 				]
 			}
