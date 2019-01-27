@@ -133,7 +133,7 @@ ModelImporter:
     2100010: vecchiaveste
     4300000: Glasses
     4300002: Hair_02_1
-    7400000: mixamo.com
+    7400000: vecchia_talking
     9500000: //RootNode
     11100000: //RootNode
     13700000: Glasses
@@ -164,7 +164,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -173,7 +173,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: vecchia_talking
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 308
@@ -252,7 +252,7 @@ ModelImporter:
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
