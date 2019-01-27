@@ -266,17 +266,16 @@
             <e p="GameManager.cs" t="Include" />
             <e p="InputManager.cs" t="Include" />
           </e>
+          <e p="NPCAnswer.cs" t="Include" />
           <e p="NPCs" t="Include">
             <e p="AbstractNPC.cs" t="Include" />
             <e p="Car.cs" t="Include" />
+            <e p="NPC.cs" t="Include" />
             <e p="NPCCollisionHandler.cs" t="Include" />
-            <e p="Police.cs" t="Include" />
-            <e p="Processione.cs" t="Include" />
-            <e p="Promoter.cs" t="Include" />
-            <e p="Vecchia.cs" t="Include" />
           </e>
           <e p="PauseCanvas.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="PostProcessingTweener.cs" t="Include" />
           <e p="QuickTimeEvent" t="Include">
             <e p="QuickTimeBar.cs" t="Include" />
             <e p="QuickTimeButton.cs" t="Include" />
