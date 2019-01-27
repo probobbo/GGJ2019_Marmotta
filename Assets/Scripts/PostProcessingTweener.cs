@@ -1,0 +1,40 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
+using Managers;
+using System;
+using DG.Tweening;
+
+public class PostProcessingTweener : MonoBehaviour
+{
+	[SerializeField] private PostProcessVolume _farPPV;
+	[SerializeField] private PostProcessVolume _nearPPV;
+	private GameManager.PlayingState _currentState;
+
+	private Tween _ppvTween;
+
+	private void Start()
+	{
+		_currentState = GameManager.Instance.CurrentState;
+		_ppvTween = DOTween.To(() => _farPPV.weight, value =>
+		{
+			_farPPV.weight = value;
+			_nearPPV.weight = 1 - value;
+		}, 0f, 0.5f).Pause();
+
+		EventManager.Instance.OnPlayingStateChanged.AddListener(ChangePPVWeight);
+	}
+
+	private void ChangePPVWeight(GameManager.PlayingState state)
+	{
+		if (state == GameManager.PlayingState.Running)
+		{
+			_ppvTween.PlayBackwards();
+		}
+		else if (state == GameManager.PlayingState.Dialoguing || state == GameManager.PlayingState.Smarmotting)
+		{
+			_ppvTween.PlayForward();
+		}
+	}
+}

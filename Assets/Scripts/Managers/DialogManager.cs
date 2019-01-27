@@ -120,7 +120,8 @@ public class DialogManager : MonoBehaviour
 			_anim.SetTrigger("dead");
 		_dialogState = DialogState.Ending;
 		_dialogPanel.gameObject.SetActive(false);
-		EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Running);
+		if (GameManager.Instance.CanChangeState)
+			EventManager.Instance.OnPlayingStateChanged.Invoke(GameManager.PlayingState.Running);
 	}
 
 	private void QuitDialog(GameManager.PlayingState playingState)
