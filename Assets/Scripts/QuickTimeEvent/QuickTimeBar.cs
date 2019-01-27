@@ -12,8 +12,11 @@ public class QuickTimeBar : MonoBehaviour
 	private Coroutine _timeLimitCoroutine;
 	public GameObject ButtonPrefab;
 	public int MaxNumberOfButtons = 5;
+	public int StartingNumberOfButtons = 3;
 	public float TimeLimit = 5.0f;
 	private float _timer = 0;
+
+	[SerializeField] private float _timeMalus = 0.5f;
 
 	private void Start()
 	{
@@ -59,6 +62,10 @@ public class QuickTimeBar : MonoBehaviour
 		{
 			PopFirst();
 		}
+		else
+		{
+			_timer += _timeMalus;
+		}
 	}
 
 	private void PopFirst()
@@ -86,7 +93,11 @@ public class QuickTimeBar : MonoBehaviour
 	{
 		_timer = 0.0f;
 		float t = 0;
-		AddButton();
+		for (int i = 0; i < StartingNumberOfButtons; i++)
+		{
+			AddButton();
+			yield return null;
+		}
 		_slider.gameObject.SetActive(true);
 		_slider.value = _slider.maxValue;
 		while (_timer < TimeLimit)
@@ -104,10 +115,4 @@ public class QuickTimeBar : MonoBehaviour
 		Clear();
 		EventManager.Instance.OnQuickTimeSuccess.Invoke(false);
 	}
-
-	private void Update()
-	{
-		
-	}
-	//
 }
