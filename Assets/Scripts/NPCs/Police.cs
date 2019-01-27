@@ -19,7 +19,7 @@ public class Police : AbstractNPC
 
 	protected override void Move()
 	{
-		if (Vector3.Distance(transform.position, _player.position) <= Range)
+		if (_walking || Vector3.Distance(transform.position, _player.position) <= Range)
 		{
 			if (!_walking) {
 				_anim.SetTrigger("walk");

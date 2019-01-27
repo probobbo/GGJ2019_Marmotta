@@ -61,8 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _offsetToPlayer: {x: 2, y: 0, z: 2}
   _npcTweenDuration: 0.5
-  Speed: 0
-  Range: 0
+  Speed: 3
+  Range: 15
 --- !u!1001 &724502718105732534
 PrefabInstance:
   m_ObjectHideFlags: 0
