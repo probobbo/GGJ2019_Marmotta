@@ -36,19 +36,19 @@ public class PlayerController : MonoBehaviour
 		}
 		else
 		{
-			if (Input.GetButtonDown("A"))
+			if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.K))
 			{
 				EventManager.Instance.OnButtonPressed.Invoke(InputManager.ControllerButtons.A);
 			}
-			if (Input.GetButtonDown("B"))
+			if (Input.GetButtonDown("B") || Input.GetKeyDown(KeyCode.L))
 			{
 				EventManager.Instance.OnButtonPressed.Invoke(InputManager.ControllerButtons.B);
 			}
-			if (Input.GetButtonDown("X"))
+			if (Input.GetButtonDown("X") || Input.GetKeyDown(KeyCode.J))
 			{
 				EventManager.Instance.OnButtonPressed.Invoke(InputManager.ControllerButtons.X);
 			}
-			if (Input.GetButtonDown("Y"))
+			if (Input.GetButtonDown("Y") || Input.GetKeyDown(KeyCode.I))
 			{
 				EventManager.Instance.OnButtonPressed.Invoke(InputManager.ControllerButtons.Y);
 			}

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3639037992722479031}
-  - component: {fileID: 1711606842058320673}
   - component: {fileID: 5276629524502411198}
   - component: {fileID: 8480953849459324843}
   m_Layer: 0
@@ -35,19 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1711606842058320673
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4259044866868574602}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &5276629524502411198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59,8 +45,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.524816, y: 4.2011104, z: 2}
-  m_Center: {x: 0.12940645, y: 2.077316, z: 0}
+  m_Size: {x: 1.9479542, y: 4.2011104, z: 2}
+  m_Center: {x: 0.14244965, y: 2.077316, z: 0}
 --- !u!114 &8480953849459324843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _offsetToPlayer: {x: 2, y: 0, z: 2}
   _npcTweenDuration: 0.5
+  Speed: 0
+  Range: 0
 --- !u!1001 &724502718105732534
 PrefabInstance:
   m_ObjectHideFlags: 0
