@@ -12,16 +12,9 @@ public class PostProcessingTweener : MonoBehaviour
 	[SerializeField] private PostProcessVolume _nearPPV;
 	private GameManager.PlayingState _currentState;
 
-	private Tween _ppvTween;
-
 	private void Start()
 	{
 		_currentState = GameManager.Instance.CurrentState;
-		_ppvTween = DOTween.To(() => _farPPV.weight, value =>
-		{
-			_farPPV.weight = value;
-			_nearPPV.weight = 1 - value;
-		}, 0f, 0.5f).Pause();
 
 		EventManager.Instance.OnPlayingStateChanged.AddListener(ChangePPVWeight);
 	}
@@ -30,11 +23,13 @@ public class PostProcessingTweener : MonoBehaviour
 	{
 		if (state == GameManager.PlayingState.Running)
 		{
-			_ppvTween.PlayBackwards();
+			DOTween.To(() => _farPPV.weight, value => _farPPV.weight = value, 1f, 0.5f);
+			DOTween.To(() => _nearPPV.weight, value => _nearPPV.weight = value, 0f, 0.5f);
 		}
 		else if (state == GameManager.PlayingState.Dialoguing || state == GameManager.PlayingState.Smarmotting)
 		{
-			_ppvTween.PlayForward();
+			DOTween.To(() => _farPPV.weight, value => _farPPV.weight = value, 0f, 0.5f);
+			DOTween.To(() => _nearPPV.weight, value => _nearPPV.weight = value, 1f, 0.5f);
 		}
 	}
 }
