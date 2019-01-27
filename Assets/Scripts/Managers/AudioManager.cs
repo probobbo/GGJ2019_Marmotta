@@ -60,30 +60,7 @@ namespace Managers
 			return audioInstance;
 		}
 		
-		
-		/// <summary>
-		/// Per gli eventi audio che possono anche stopparsi e avere cambi di parametro
-		/// </summary>
-		public static EventInstance CreateInstance(string eventRef, GameObject obj)
-		{
-			EventInstance audioInstance;
-			try
-			{
-				audioInstance = RuntimeManager.CreateInstance(eventRef);
 
-			}
-			catch (EventNotFoundException e)
-			{
-				//Riproduco evento dummy quando non trovo eventRef tra quelli di FMOD perche non riusciamo a gestire l'eccezione altrimenti
-				audioInstance = RuntimeManager.CreateInstance("");
-				Debug.LogError($"[AudioManager] Cant find this eventRef:{eventRef}" + e);
-			}
-
-			RuntimeManager.AttachInstanceToGameObject(audioInstance, obj.transform, (Rigidbody) null);
-
-			return audioInstance;
-		}
-		
 		
 		/// <summary>
 		/// Come Gameobject usa l'AudioManager

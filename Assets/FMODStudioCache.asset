@@ -38,13 +38,15 @@ MonoBehaviour:
   - {fileID: 114122528855618290}
   - {fileID: 114195512255081586}
   - {fileID: 114697860656328058}
+  - {fileID: 114778639476448082}
+  - {fileID: 114260647336672432}
   MasterBanks:
   - {fileID: 114916763759548984}
   - {fileID: 114913938852117972}
   - {fileID: 114133991798075382}
   StringsBanks:
   - {fileID: 114331515255334868}
-  stringsBankWriteTime: 636841843242430303
+  stringsBankWriteTime: 636841999316650395
   cacheVersion: 3
 --- !u!114 &114011278545761172
 MonoBehaviour:
@@ -59,13 +61,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: D:\Unity3DProjects\GGJ2019_Marmotta\FMODBanks\Desktop\Master Bank.bank
-  lastModified: 636841843242349964
+  lastModified: 636841999316560640
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2429088
+    Value: 7135936
   - Name: Mobile
-    Value: 1310464
+    Value: 3749568
   Exists: 1
 --- !u!114 &114052450612511190
 MonoBehaviour:
@@ -83,13 +85,14 @@ MonoBehaviour:
   guid: 43a8459c137767499cd73fabf1e877a1
   Banks:
   - {fileID: 114011278545761172}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114887474994994160}
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 22153
 --- !u!114 &114100109953904514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +298,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 21293
+--- !u!114 &114260647336672432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MUS_BathRoom
+  guid: 6f3e8cbe9a45c24480e84890fcb14164
+  Banks:
+  - {fileID: 114011278545761172}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 36922
 --- !u!114 &114272589418812288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +344,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1392
+--- !u!114 &114277974264294306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Value
+  Min: 0
+  Max: 100
+  Default: 0
 --- !u!114 &114322462145457344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,13 +396,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMODBanks\Desktop\Master Bank.strings.bank
-  lastModified: 636841843242430303
+  lastModified: 636841999316650395
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1906
+    Value: 2028
   - Name: Mobile
-    Value: 1906
+    Value: 2028
   Exists: 1
 --- !u!114 &114380275949653572
 MonoBehaviour:
@@ -378,13 +420,13 @@ MonoBehaviour:
   guid: 9e847b45db0cb942b34cef3ff45075f6
   Banks:
   - {fileID: 114011278545761172}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 36922
 --- !u!114 &114400404443110676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,6 +450,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 52000
+--- !u!114 &114440754027687574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Value
+  Min: 0
+  Max: 100
+  Default: 0
 --- !u!114 &114504614122415434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,6 +625,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3842
+--- !u!114 &114778639476448082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/AMB_BathRoom
+  guid: 41d08f50acd6304a943a7308a1c87b20
+  Banks:
+  - {fileID: 114011278545761172}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 14000
 --- !u!114 &114835606422350120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +671,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 860
+--- !u!114 &114887474994994160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Value
+  Min: 0
+  Max: 100
+  Default: 0
 --- !u!114 &114913938852117972
 MonoBehaviour:
   m_ObjectHideFlags: 0

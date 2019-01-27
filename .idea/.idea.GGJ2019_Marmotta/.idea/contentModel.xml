@@ -22,6 +22,7 @@
             </e>
           </e>
         </e>
+        <e p="Music.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="FMOD" t="Include">
